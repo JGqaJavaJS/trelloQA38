@@ -3,6 +3,9 @@ package manager;
 import dto.UserDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class HelperLogin extends HelperBase{
@@ -28,11 +31,11 @@ public class HelperLogin extends HelperBase{
     6. assert for workspace
      */
 
-    public void login(UserDTO userDTO) {
+    public void login(UserDTO userDTO, WebDriverWait wait) {
         openLoginPage();
         enterEmailLogin(userDTO);
         clickContinueLogin();
-        typePasswordLogin(userDTO);
+        typePasswordLogin(userDTO, wait);
         clickConfirmPasswordButton();
     }
 
@@ -48,12 +51,54 @@ public class HelperLogin extends HelperBase{
         click(BTN_LOGIN);
     }
 
-    public void typePasswordLogin(UserDTO userDTO) {
+    public void typePasswordLogin(UserDTO userDTO, WebDriverWait wait) {
+        WebElement element =
+                wait.until(ExpectedConditions.visibilityOfElementLocated(INPUT_PASSWORD));
         type(INPUT_PASSWORD, userDTO.getPassword());
     }
 
     public void clickConfirmPasswordButton() {
         click(CONFIRM_PASSWORD_BTN);
+    }
+
+    public void waitElement(By locator, int millis) {
+        int counter = 0;
+        WebElement el = null;
+        try {
+            el = driver.findElement(By.xpath(""));
+        } catch (Exception e) {
+
+        }
+        while(el == null || counter < 30) {
+            counter ++;
+            pause(millis); // 300 not more *300 *20 = 6000
+            // 0    1   2
+            // 300+300+300+300+...
+            /* copied pause method not uncomment
+                public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+             */
+            try {
+                el = driver.findElement(By.xpath(""));
+            } catch (Exception e) {
+
+            }
+        }
+    }
+
+    public boolean validateLoginSuccess() {
+        return isElementEnable(TEXT_WORKSPACE_AFTER_LOGIN);
+    }
+
+    public boolean validatePasswordInputEnable(WebDriverWait wait) {
+        WebElement element =
+                wait.until(ExpectedConditions.visibilityOfElementLocated(INPUT_PASSWORD));
+        return isElementEnable(INPUT_PASSWORD);
     }
 
 }

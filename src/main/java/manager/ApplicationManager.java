@@ -26,6 +26,12 @@ public class ApplicationManager {
 
     HelperLogin helperLogin;
 
+    WebDriverWait wait;
+
+    public WebDriverWait getWait() {
+        return wait;
+    }
+
     public HelperLogin getHelperLogin() {
         return helperLogin;
     }
@@ -49,11 +55,15 @@ public class ApplicationManager {
         helperLogin = new HelperLogin(driver);
         driver.manage().window().maximize();
         driver.navigate().to("https://trello.com/");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 90);
 
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        WebElement element =
 //                wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("elementId")));
+
+
+
     }
 
     @AfterSuite
