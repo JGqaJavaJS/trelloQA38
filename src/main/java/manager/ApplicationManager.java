@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,13 +21,14 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
   // changed for WD listener
     EventFiringWebDriver driver;
 
     HelperLogin helperLogin;
+
+    HelperLogout helperLogout;
 
     WebDriverWait wait;
 
@@ -38,25 +40,27 @@ public class ApplicationManager {
         return helperLogin;
     }
 
+    public HelperLogout getHelperLogout() {return helperLogout;}
+
     @BeforeSuite
     public void init(){
 
 //        driver = new ChromeDriver();
        // driver = new EventFiringWebDriver(new ChromeDriver());
 
-        ChromeOptions chromeOptions = new ChromeOptions();
-        WebDriverManager.chromedriver().setup();
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        WebDriverManager.chromedriver().setup();
+//        // changed for WD Listener
+//        driver = new EventFiringWebDriver(new ChromeDriver(chromeOptions));
 
-        // changed for WD Listener
-        driver = new EventFiringWebDriver(new ChromeDriver(chromeOptions));
-
-//        FirefoxOptions firefoxOptions = new FirefoxOptions();
-//        WebDriverManager.firefoxdriver().setup();
-//        driver = new EventFiringWebDriver(new FirefoxDriver(firefoxOptions));
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new EventFiringWebDriver(new FirefoxDriver(firefoxOptions));
 
 
         driver.register(new WebDriverListener());
         helperLogin = new HelperLogin(driver);
+        helperLogout = new HelperLogout(driver);
         driver.manage().window().maximize();
         driver.navigate().to("https://trello.com/");
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -70,9 +74,13 @@ public class ApplicationManager {
 
     }
 
+    public void navigateToMainPage() {
+        driver.navigate().to("https://trello.com/");
+    }
+
     @AfterSuite
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 
 }

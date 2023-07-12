@@ -47,7 +47,14 @@ public class HelperBase {
     }
 
     public boolean isElementEnable(By locator) {
-        return driver.findElement(locator).isEnabled();
+    WebElement element = null;
+        try {
+            element = driver.findElement(locator);
+        }
+        catch(Exception e) {
+            return false;
+        }
+        return element.isEnabled();
     }
 
 }
