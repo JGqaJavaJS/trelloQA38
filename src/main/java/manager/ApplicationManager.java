@@ -63,7 +63,7 @@ public class ApplicationManager {
         helperLogout = new HelperLogout(driver);
         driver.manage().window().maximize();
         driver.navigate().to("https://trello.com/");
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 90);
 
 //        WebDriverWait wait = new WebDriverWait(driver, 10);

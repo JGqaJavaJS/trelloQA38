@@ -1,0 +1,3 @@
+19:58:40 INFO  manager.TestNgListener - Test loginTestPasswordInput invoked
+19:58:40 INFO  TestBase - start test loginTestPasswordInput
+19:58:40 INFO  manager.TestNgListener - Test loginTestPasswordInput failed: java.lang.NullPointerException
