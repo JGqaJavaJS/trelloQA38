@@ -23,6 +23,8 @@ public class HelperBase {
         }
     }
 
+    // add for WD listener also need to create folder screenshots in the folder test - if not exist
+
     public void takeScreenshot(String link){
         File tmp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File(link);
