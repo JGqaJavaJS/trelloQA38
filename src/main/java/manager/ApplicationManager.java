@@ -22,6 +22,8 @@ public class ApplicationManager {
 
 
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
+
+  // changed for WD listener
     EventFiringWebDriver driver;
 
     HelperLogin helperLogin;
@@ -44,6 +46,8 @@ public class ApplicationManager {
 
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
+
+        // changed for WD Listener
         driver = new EventFiringWebDriver(new ChromeDriver(chromeOptions));
 
 //        FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -51,7 +55,7 @@ public class ApplicationManager {
 //        driver = new EventFiringWebDriver(new FirefoxDriver(firefoxOptions));
 
 
-       // driver.register(new WebDriverListener());
+        driver.register(new WebDriverListener());
         helperLogin = new HelperLogin(driver);
         driver.manage().window().maximize();
         driver.navigate().to("https://trello.com/");
