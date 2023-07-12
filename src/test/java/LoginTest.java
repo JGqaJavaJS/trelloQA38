@@ -1,7 +1,10 @@
 import dto.UserDTO;
+import manager.TestNgListener;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(TestNgListener.class)
 public class LoginTest extends TestBase{
 
     UserDTO userDtoPositive = UserDTO.builder().email("juliagordyin@gmail.com")
