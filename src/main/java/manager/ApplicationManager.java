@@ -30,6 +30,8 @@ public class ApplicationManager {
 
     HelperLogout helperLogout;
 
+    HelperMainPage helperMainPage;
+
     WebDriverWait wait;
 
     public WebDriverWait getWait() {
@@ -41,6 +43,8 @@ public class ApplicationManager {
     }
 
     public HelperLogout getHelperLogout() {return helperLogout;}
+
+    public HelperMainPage getHelperMainPage() { return helperMainPage;}
 
     @BeforeSuite
     public void init(){
@@ -61,6 +65,7 @@ public class ApplicationManager {
         driver.register(new WebDriverListener());
         helperLogin = new HelperLogin(driver);
         helperLogout = new HelperLogout(driver);
+        helperMainPage = new HelperMainPage(driver);
         driver.manage().window().maximize();
         driver.navigate().to("https://trello.com/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
