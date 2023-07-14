@@ -3,11 +3,15 @@ package manager;
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 
 public class HelperBase {
+
+    Logger logger = LoggerFactory.getLogger(HelperBase.class);
 
     WebDriver driver;
 
@@ -55,6 +59,10 @@ public class HelperBase {
             return false;
         }
         return element.isEnabled();
+    }
+
+    public String getText(By locator) {
+        return driver.findElement(locator).getText();
     }
 
 }

@@ -85,7 +85,7 @@ public class ApplicationManager {
 
     @AfterSuite
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 
 }

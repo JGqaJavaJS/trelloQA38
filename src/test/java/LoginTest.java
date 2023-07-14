@@ -21,7 +21,7 @@ public class LoginTest extends TestBase{
 //            res = false;
 //        }
         // if(true)   if(1==1)
-        if (app.getHelperLogin().validateLoginSuccess()) { // will be res = true or res=false
+        if (app.getHelperLogin().validateLoginSuccess2()) { // will be res = true or res=false
             app.getHelperLogout().logout();
         } else {
             app.navigateToMainPage();
