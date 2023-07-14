@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class HelperBase {
 
@@ -50,15 +52,28 @@ public class HelperBase {
         element.sendKeys(text);
     }
 
+    public void changeImplicitlyTime(int seconds) {
+        driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+    }
+
     public boolean isElementEnable(By locator) {
-    WebElement element = null;
-        try {
-            element = driver.findElement(locator);
-        }
-        catch(Exception e) {
-            return false;
-        }
-        return element.isEnabled();
+//    WebElement element = null;
+//        try {
+//            element = driver.findElement(locator);
+//        }
+//        catch(Exception e) {
+//            return false;
+//        }
+//        return element.isEnabled();
+//___________________________________________________________________________
+        // second solution
+        changeImplicitlyTime(0);
+        // here need to be carefully and to be sure that we get Implicitly Time back to 60 seconds
+        // and to use it only - when we know that the page downloaded and we do not need to wait it
+        // get run time for all tests 41 seconds, without changing -> 2 m 42 sec
+        List<WebElement> elements = driver.findElements(locator);
+        changeImplicitlyTime(60);
+        return elements.size() != 0;
     }
 
     public String getText(By locator) {
