@@ -1,0 +1,126 @@
+15:19:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution firefox=115 in cache (valid until 16:00:39 14/07/2023 AST)
+15:19:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution firefox115=0.33.0 in cache (valid until 15:10:53 15/07/2023 AST)
+15:19:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 115)
+15:19:37 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver geckodriver 0.33.0 found in cache
+15:19:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/julia/.cache/selenium/geckodriver/mac64/0.33.0/geckodriver
+15:19:41 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //span[@data-testid='home-team-tab-name']
+15:20:41 INFO  manager.WebDriverListener - Something went wrong!
+15:20:41 INFO  manager.WebDriverListener - Unable to locate element: //span[@data-testid='home-team-tab-name']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Julias-MacBook-Air.local', ip: 'fe80:0:0:0:843:62aa:68cf:ed76%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230710165010, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.1.0, moz:processID: 15504, moz:profile: /var/folders/l2/dkv6hdt560v..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 723a9ce6-c0d7-435c-a07a-cc9f1a5d5567
+*** Element info: {Using=xpath, value=//span[@data-testid='home-team-tab-name']}
+15:20:41 INFO  manager.WebDriverListener - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@data-testid='home-team-tab-name']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Julias-MacBook-Air.local', ip: 'fe80:0:0:0:843:62aa:68cf:ed76%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230710165010, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.1.0, moz:processID: 15504, moz:profile: /var/folders/l2/dkv6hdt560v..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 723a9ce6-c0d7-435c-a07a-cc9f1a5d5567
+*** Element info: {Using=xpath, value=//span[@data-testid='home-team-tab-name']}
+15:20:41 INFO  manager.WebDriverListener - This is a link to screenshot with error ---> src/test/screenshots/screen-1241.png
+15:20:42 INFO  manager.TestNgListener - Test loginTestPasswordInput invoked
+15:20:42 INFO  TestBase - start test loginTestPasswordInput
+15:20:42 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //a[contains(text(), 'Log in')]
+15:20:42 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //a[contains(text(), 'Log in')] is found
+15:20:44 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@id='user']
+15:20:44 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@id='user'] is found
+15:20:44 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@id='login']
+15:20:44 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@id='login'] is found
+15:20:44 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:20:44 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:20:45 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:20:45 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:20:45 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:20:47 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:20:47 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:20:48 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:20:48 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:20:48 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:20:48 INFO  manager.TestNgListener - Test loginTestPasswordInput successful
+15:20:48 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //span[@data-testid='home-team-tab-name']
+15:21:48 INFO  manager.WebDriverListener - Something went wrong!
+15:21:48 INFO  manager.WebDriverListener - Unable to locate element: //span[@data-testid='home-team-tab-name']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Julias-MacBook-Air.local', ip: 'fe80:0:0:0:843:62aa:68cf:ed76%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230710165010, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.1.0, moz:processID: 15504, moz:profile: /var/folders/l2/dkv6hdt560v..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 723a9ce6-c0d7-435c-a07a-cc9f1a5d5567
+*** Element info: {Using=xpath, value=//span[@data-testid='home-team-tab-name']}
+15:21:48 INFO  manager.WebDriverListener - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@data-testid='home-team-tab-name']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Julias-MacBook-Air.local', ip: 'fe80:0:0:0:843:62aa:68cf:ed76%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230710165010, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.1.0, moz:processID: 15504, moz:profile: /var/folders/l2/dkv6hdt560v..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 723a9ce6-c0d7-435c-a07a-cc9f1a5d5567
+*** Element info: {Using=xpath, value=//span[@data-testid='home-team-tab-name']}
+15:21:48 INFO  manager.WebDriverListener - This is a link to screenshot with error ---> src/test/screenshots/screen-1308.png
+15:21:48 INFO  manager.TestNgListener - Test loginTestPositive invoked
+15:21:48 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //a[contains(text(), 'Log in')]
+15:21:48 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //a[contains(text(), 'Log in')] is found
+15:21:49 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@id='user']
+15:21:49 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@id='user'] is found
+15:21:50 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@id='login']
+15:21:50 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@id='login'] is found
+15:21:50 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:21:50 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:21:50 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:21:50 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:21:51 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:21:51 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:21:51 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:21:51 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:21:51 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:21:51 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:21:52 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@id='login-submit']
+15:21:52 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@id='login-submit'] is found
+15:21:52 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //span[@data-testid='home-team-tab-name']
+15:21:57 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //span[@data-testid='home-team-tab-name'] is found
+15:21:57 INFO  manager.TestNgListener - Test loginTestPositive successful
+15:21:57 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //span[@data-testid='home-team-tab-name']
+15:21:57 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //span[@data-testid='home-team-tab-name'] is found
+15:21:57 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@data-testid='header-member-menu-button']
+15:21:57 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@data-testid='header-member-menu-button'] is found
+15:21:58 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@data-testid='account-menu-logout']
+15:21:58 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@data-testid='account-menu-logout'] is found
+15:21:59 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@id='logout-submit']
+15:21:59 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@id='logout-submit'] is found
+15:22:01 INFO  manager.TestNgListener - Test loginTestPositive invoked
+15:22:01 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //a[contains(text(), 'Log in')]
+15:22:04 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //a[contains(text(), 'Log in')] is found
+15:22:05 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@id='user']
+15:22:05 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@id='user'] is found
+15:22:05 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@id='login']
+15:22:05 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@id='login'] is found
+15:22:05 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:22:05 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:22:06 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:22:06 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:22:06 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:22:06 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:22:07 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:22:07 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:22:07 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //input[@name='password']
+15:22:07 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //input[@name='password'] is found
+15:22:07 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@id='login-submit']
+15:22:07 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@id='login-submit'] is found
+15:22:07 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //span[@data-testid='home-team-tab-name']
+15:22:12 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //span[@data-testid='home-team-tab-name'] is found
+15:22:12 INFO  manager.TestNgListener - Test loginTestPositive successful
+15:22:12 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //span[@data-testid='home-team-tab-name']
+15:22:12 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //span[@data-testid='home-team-tab-name'] is found
+15:22:12 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@data-testid='header-member-menu-button']
+15:22:12 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@data-testid='header-member-menu-button'] is found
+15:22:12 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@data-testid='account-menu-logout']
+15:22:12 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@data-testid='account-menu-logout'] is found
+15:22:13 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //button[@id='logout-submit']
+15:22:13 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //button[@id='logout-submit'] is found
+15:22:13 INFO  manager.TestNgListener - Test testTitleH1 invoked
+15:22:13 INFO  manager.WebDriverListener - Start searching element ----> By.xpath: //h1
+15:22:15 INFO  manager.WebDriverListener - Element with locator ----> By.xpath: //h1 is found
+15:22:15 INFO  manager.TestNgListener - Test testTitleH1 successful
