@@ -30,6 +30,11 @@ test {
 
 task newtest(type: Test) {
     useTestNG() {
+        def groups = System.getProperty('groups')
+        if(groups != null){
+            includeGroups groups
+        }
+
         def suite = System.getProperty('suite','')
         if(suite.equals('login')) {
             suites 'src/test/resources/testng.xml'

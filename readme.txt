@@ -21,3 +21,4 @@ to add all current settings:
 ./gradlew clean -Dbrowser=firefox -Dsuite=login newtest
 -----------------
 groups:
+./gradlew clean -Dbrowser=firefox -Dsuite=login -Dgroups=smoke newtest
