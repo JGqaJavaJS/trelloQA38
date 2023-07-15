@@ -37,4 +37,7 @@ task newtest(type: Test) {
             suites 'src/test/resources/mainpage.xml'
         }
     }
+    if(project.hasProperty('browser')){
+        systemProperty 'browser', "$browser"
+    }
 }
