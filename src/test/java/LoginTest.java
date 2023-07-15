@@ -34,7 +34,7 @@ public class LoginTest extends TestBase{
         Assert.assertTrue(app.getHelperLogin().validateLoginSuccess());
     }
 
-    @Test(groups = {"smoke"})
+    @Test
     public void loginTestPasswordInput() {
         logger.info("start test loginTestPasswordInput");
         app.getHelperLogin().openLoginPage();
