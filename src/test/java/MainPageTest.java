@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class MainPageTest extends TestBase{
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void checkIsLogin() {
         if (app.getHelperLogin().validateLoginSuccess2()) { // will be res = true or res=false
             app.getHelperLogout().logout();

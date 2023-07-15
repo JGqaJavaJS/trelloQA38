@@ -11,7 +11,7 @@ public class LoginTest extends TestBase{
     UserDTO userDtoPositive = UserDTO.builder().email("juliagordyin@gmail.com")
             .password("123456Aa").build();
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void checkIsLogin() {
 //        boolean res;
 //        try {

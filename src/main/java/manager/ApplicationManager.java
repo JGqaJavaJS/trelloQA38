@@ -53,7 +53,7 @@ public class ApplicationManager {
 
     public HelperMainPage getHelperMainPage() { return helperMainPage;}
 
-    @BeforeSuite
+  //  @BeforeSuite
     public void init(){
 
 //        driver = new ChromeDriver();
@@ -92,7 +92,7 @@ public class ApplicationManager {
         driver.navigate().to("https://trello.com/");
     }
 
-    @AfterSuite
+    //@AfterSuite
     public void tearDown(){
         driver.quit();
     }
