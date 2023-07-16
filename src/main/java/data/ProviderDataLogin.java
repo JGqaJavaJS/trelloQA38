@@ -20,4 +20,16 @@ public class ProviderDataLogin {
         return list.iterator();
     }
 
+    @DataProvider
+    public Iterator<Object[]> userDtoLogin(){
+        List<Object[]> list = new ArrayList<>();
+        list.add(new Object[]{
+                UserDTO.builder().email("juliagordyin@gmail.com").password("123456Aa").build()
+        });
+        list.add(new Object[]{
+                UserDTO.builder().email("juliagordyin@gmail.com").password("123456Aa").build()
+        });
+        return list.iterator();
+    }
+
 }

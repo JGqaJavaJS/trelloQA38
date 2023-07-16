@@ -1,6 +1,7 @@
 import data.ProviderDataLogin;
 import dto.UserDTO;
 import manager.TestNgListener;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -42,7 +43,14 @@ public class LoginTest extends TestBase{
         app.getHelperLogin().openLoginPage();
         app.getHelperLogin().enterEmailLogin(userDtoPositive);
         app.getHelperLogin().clickContinueLogin();
-        Assert.assertTrue(app.getHelperLogin().validatePasswordInputEnable(app.getWait()));
+        WebDriverWait wait = app.getWait();
+      //  Assert.assertTrue(app.getHelperLogin().validatePasswordInputEnable(app.getWait()));
+        Assert.assertTrue(app.getHelperLogin().validatePasswordInputEnable(wait));
+        /*
+        app.getWait()
+        int varRes = 55;
+        someFun(1, "str", varRes, callFunc() - return)
+         */
     }
 
     @Test(dataProvider = "userDtoWrongPassword", dataProviderClass = ProviderDataLogin.class)
@@ -50,5 +58,8 @@ public class LoginTest extends TestBase{
         app.getHelperLogin().login(userFromDataProvider, app.getWait());
         Assert.assertTrue(app.getHelperLogin().validatePasswordIncorrect());
     }
+
+    // list = 1 element, 2 element ..... iterator
+    // array foreach
 
 }
