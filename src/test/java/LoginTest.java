@@ -1,3 +1,4 @@
+import data.ProviderDataLogin;
 import dto.UserDTO;
 import manager.TestNgListener;
 import org.testng.Assert;
@@ -41,6 +42,12 @@ public class LoginTest extends TestBase{
         app.getHelperLogin().enterEmailLogin(userDtoPositive);
         app.getHelperLogin().clickContinueLogin();
         Assert.assertTrue(app.getHelperLogin().validatePasswordInputEnable(app.getWait()));
+    }
+
+    @Test(dataProvider = "userDtoWrongPassword", dataProviderClass = ProviderDataLogin.class)
+    public void loginWithIncorrectPassword(UserDTO userFromDataProvider) {
+        app.getHelperLogin().login(userFromDataProvider, app.getWait());
+        Assert.assertTrue(app.getHelperLogin().validatePasswordIncorrect());
     }
 
 }
