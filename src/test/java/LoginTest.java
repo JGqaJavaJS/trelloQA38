@@ -14,6 +14,7 @@ public class LoginTest extends TestBase{
 
     @BeforeMethod(alwaysRun = true)
     public void checkIsLogin() {
+        app.getHelperLogin().changeImplicitlyTime(60);
 //        boolean res;
 //        try {
 //            res = app.getHelperLogin().validateLoginSuccess();
