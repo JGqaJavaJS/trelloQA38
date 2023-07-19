@@ -59,6 +59,12 @@ public class LoginTest extends TestBase{
         Assert.assertTrue(app.getHelperLogin().validatePasswordIncorrect());
     }
 
+    @Test(dataProvider = "userDtoCSV", dataProviderClass = ProviderDataLogin.class)
+    public void loginTest(UserDTO userFromCSVFile) {
+        app.getHelperLogin().login(userFromCSVFile, app.getWait());
+        Assert.assertTrue(app.getHelperLogin().validateLoginSuccess());
+    }
+
     // list = 1 element, 2 element ..... iterator
     // array foreach
 

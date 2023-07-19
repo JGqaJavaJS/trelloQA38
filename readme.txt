@@ -22,3 +22,9 @@ to add all current settings:
 -----------------
 groups:
 ./gradlew clean -Dbrowser=firefox -Dsuite=login -Dgroups=smoke newtest
+-------------------
+
+
+trello.com -> prod
+preprod.trello.com -> pre prod
+qa-25.trello.com -> env for qa (personal)

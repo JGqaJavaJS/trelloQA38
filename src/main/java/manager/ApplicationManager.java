@@ -17,7 +17,11 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Instant;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -36,8 +40,10 @@ public class ApplicationManager {
     WebDriverWait wait;
 
     String browser;
+    Properties properties;
 
     public ApplicationManager(String browser) {
+        properties = new Properties();
         this.browser = browser;
     }
 
@@ -55,6 +61,14 @@ public class ApplicationManager {
 
   //  @BeforeSuite
     public void init(){
+
+     //   properties.load(new FileReader(new File("src/test/resources/prod.properties")));
+
+        try (FileReader fr = new FileReader(new File("src/test/resources/prod.properties"))){
+            properties.load(fr);
+        } catch (IOException e) {
+
+        }
 
 //        driver = new ChromeDriver();
        // driver = new EventFiringWebDriver(new ChromeDriver());
@@ -76,7 +90,7 @@ public class ApplicationManager {
         helperLogout = new HelperLogout(driver);
         helperMainPage = new HelperMainPage(driver);
         driver.manage().window().maximize();
-        driver.navigate().to("https://trello.com/");
+        driver.navigate().to(properties.getProperty("url"));
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 90);
 
