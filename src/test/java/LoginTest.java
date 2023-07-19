@@ -13,9 +13,18 @@ public class LoginTest extends TestBase{
     UserDTO userDtoPositive = UserDTO.builder().email("juliagordyin@gmail.com")
             .password("123456Aa").build();
 
+    UserDTO userDtoFromProperties;
+
     @BeforeMethod(alwaysRun = true)
     public void checkIsLogin() {
-        app.getHelperLogin().changeImplicitlyTime(60);
+        if(userDtoFromProperties == null) {
+            userDtoFromProperties = UserDTO.builder().email(app.getEmail())
+                    .password(app.getPassword()).build();
+        }
+
+    //    app.getHelperLogin().changeImplicitlyTime(60);
+
+
 //        boolean res;
 //        try {
 //            res = app.getHelperLogin().validateLoginSuccess();
@@ -34,6 +43,12 @@ public class LoginTest extends TestBase{
     @Test(invocationCount = 2)
     public void loginTestPositive() {
         app.getHelperLogin().login(userDtoPositive, app.getWait());
+        Assert.assertTrue(app.getHelperLogin().validateLoginSuccess());
+    }
+
+    @Test
+    public void loginTestPositiveProperties() {
+        app.getHelperLogin().login(userDtoFromProperties, app.getWait());
         Assert.assertTrue(app.getHelperLogin().validateLoginSuccess());
     }
 

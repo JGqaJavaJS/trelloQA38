@@ -47,6 +47,9 @@ public class ApplicationManager {
         this.browser = browser;
     }
 
+    public String getEmail() {return properties.getProperty("email"); }
+    public String getPassword() { return properties.getProperty("password"); }
+
     public WebDriverWait getWait() {
         return wait;
     }
@@ -93,6 +96,12 @@ public class ApplicationManager {
         driver.navigate().to(properties.getProperty("url"));
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 90);
+
+//        System.out.println("_________________________________________");
+//        System.out.println(properties.getProperty("url"));
+//        System.out.println(properties.getProperty("email"));
+//        System.out.println(properties.getProperty("password"));
+//        System.out.println("_________________________________________");
 
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        WebElement element =
