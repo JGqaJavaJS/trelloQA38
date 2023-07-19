@@ -65,9 +65,13 @@ public class ApplicationManager {
   //  @BeforeSuite
     public void init(){
 
-     //   properties.load(new FileReader(new File("src/test/resources/prod.properties")));
+     //   with throw exception:
+        //   properties.load(new FileReader(new File("src/test/resources/prod.properties")));
 
-        try (FileReader fr = new FileReader(new File("src/test/resources/prod.properties"))){
+        String target = System.getProperty("target", "prod");
+        String path = String.format("src/test/resources/%s.properties", target);
+
+        try (FileReader fr = new FileReader(new File(path))){
             properties.load(fr);
         } catch (IOException e) {
 

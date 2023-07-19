@@ -56,7 +56,7 @@ public class LoginTest extends TestBase{
     public void loginTestPasswordInput() {
         logger.info("start test loginTestPasswordInput");
         app.getHelperLogin().openLoginPage();
-        app.getHelperLogin().enterEmailLogin(userDtoPositive);
+        app.getHelperLogin().enterEmailLogin(userDtoFromProperties);
         app.getHelperLogin().clickContinueLogin();
         WebDriverWait wait = app.getWait();
       //  Assert.assertTrue(app.getHelperLogin().validatePasswordInputEnable(app.getWait()));
