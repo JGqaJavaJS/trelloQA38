@@ -36,3 +36,5 @@ qa-25.trello.com -> env for qa (personal)
 _____________________
 
 let str = `some var in the text ${varName}`
+
+add comment for Pull Request
